@@ -14,6 +14,7 @@ import { MaterialModule } from '@app/material.module';
 import { SharedModule } from '@app/shared/shared.module';
 import { StateModule } from '@app/state/state.module';
 import { environment } from '@env/environment';
+import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { environment } from '@env/environment';
   ],
   entryComponents: [SearchDialogComponent],
   imports: [
+    AngularFireModule.initializeApp(environment.google.firebase, 'ngrx-course'),
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,

@@ -28,17 +28,17 @@ export class AddUserComponent {
 ```javascript
 export class UserListComponent implements OnInit {
 
-  users$: Observable<Array<User>>;
+  users: Observable<Array<User>>;
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
-    this.users$ = this.store.pipe(select(allUsers));
+    this.users = this.store.pipe(select(allUsers));
   }
 }
 ```
 
-* `users$` is an `Observable` that receives notifications
+* `users` is an `Observable` that receives notifications
 * The notification type is an array of `User` objects
 * Inject `Store`
 * Invoke the `pipe()` method on the `store`

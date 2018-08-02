@@ -11,8 +11,8 @@ export class UserEffects {
 
   @Effect()
   add: Observable<Action> = this.actions$
-    .ofType<AddUserAction>(UserActionTypes.AddUser)
     .pipe(
+      ofType<AddUserAction>(UserActionTypes.AddUser),
       exhaustMap(action =>
         this.service
           .save(action.user)

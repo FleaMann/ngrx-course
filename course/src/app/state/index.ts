@@ -44,10 +44,10 @@ export interface State {
 }
 
 export const reducers: ActionReducerMap<State> = {
-  [Features.dialog]: dialogReducer,
-  [Features.map]: mapReducer,
-  [Features.sidenav]: sidenavReducer,
-  [Features.resort]: resortReducer
+  dialog: dialogReducer,
+  map: mapReducer,
+  sidenav: sidenavReducer,
+  resort: resortReducer
 };
 
 export const metaReducers: MetaReducer<State>[] = !environment.production

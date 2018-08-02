@@ -15,7 +15,7 @@
 
 ```javascript
 {
-  type: '[user] Add user',
+  type: '[User] Add user',
   user: Partial<User>
 }
 ```
@@ -26,9 +26,9 @@ While we can create simple object actions, using TypeScript we can create classe
 
 ```javascript
 export enum UserActionTypes {
-  AddUser: '[user] Add user',
-  AddUserFail: '[user] Add user fail',
-  AddUserSuccess: '[user] Add user success'
+  AddUser: '[User] Add user',
+  AddUserFail: '[User] Add user fail',
+  AddUserSuccess: '[User] Add user success'
 }
 
 export class AddUserAction implements Action {
